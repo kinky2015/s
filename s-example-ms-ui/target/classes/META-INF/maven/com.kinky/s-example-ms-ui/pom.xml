@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.kinky</groupId>
+    <artifactId>s</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>s-example-ms-ui</artifactId>
+  <name>s-example-ms-ui</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+     <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId>e-core-static</artifactId>
+     <version>${eversion}</version>
+    </dependency>
+	 <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId>e-core-ui</artifactId>
+     <version>${eversion}</version>
+    </dependency>
+	 <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId>e-upm-ui</artifactId>
+     <version>3.0.1.12</version>
+    </dependency>
+	 <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId>e-log-ui</artifactId>
+     <version>${eversion}</version>
+    </dependency>
+	 <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId>e-data-permission-ui</artifactId>
+     <version>${eversion}</version>
+    </dependency>
+	<!-- compile project(":demo:demo-ui")
+	 <dependency>
+      <groupId>com.17jee</groupId>
+      <artifactId></artifactId>
+     <version>${eversion}</version>
+    </dependency> -->
+  </dependencies>
+</project>

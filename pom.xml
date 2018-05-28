@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.kinky</groupId>
+  <artifactId>s</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <name>s</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+  	<module>s-example-single</module>
+  	<module>s-example-ms-db</module>
+  	<module>s-example-ms-discovery</module>
+  	<module>s-example-gateway</module>
+  	<module>s-example-ms-log</module>
+  	<module>s-example-ms-oauth2</module>
+  	<module>s-example-ms-start</module>
+  	<module>s-example-ms-start-w</module>
+  	<module>s-example-ms-ui</module>
+  	<module>s-example-ms-upm</module>
+  </modules>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<version>3.0.1.3</version>
+	<eversion>3.0.1.11</eversion>
+	<group>com.17jee</group>
+	<springBootVersion>1.4.3.RELEASE</springBootVersion>
+	<springSessionRedisVersion>1.2.1.RELEASE</springSessionRedisVersion> 
+	<gradleVersion>2.14.1</gradleVersion>
+	<sourceCompatibility>1.8</sourceCompatibility>
+	<targetCompatibility>1.8</targetCompatibility>
+	<springfoxSwaggerVersion>2.5.0</springfoxSwaggerVersion>
+	<commonsLangVersion>2.6</commonsLangVersion>
+	<commonsBeanutilsVersion>1.9.2</commonsBeanutilsVersion>
+	<freemarkerVersion>2.3.25-incubating</freemarkerVersion>
+	<poiExcelantVersion>3.9</poiExcelantVersion>
+	<jdomVersion>1.1.3</jdomVersion>
+	<commonsCollectionsVersion>3.2.2</commonsCollectionsVersion>
+	<activitiVersion>5.21.0</activitiVersion>
+	<httpclient>4.5.2</httpclient>
+	<groovyVersion>2.4.7</groovyVersion>
+	<jacksonVersion>2.6.7</jacksonVersion>
+	<org.gradle.daemon>false</org.gradle.daemon>
+	<springCloud>1.2.3.RELEASE</springCloud>
+	<springCloudOauth2>1.1.3.RELEASE</springCloudOauth2>
+	<mysqlVersion>5.1.8</mysqlVersion>
+	<ognlVersion>3.1.12</ognlVersion>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+  <plugins>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.7.0</version>
+		<configuration>
+		<source>1.8</source>
+		<target>1.8</target>
+		<encoding>UTF-8</encoding>
+		</configuration>
+	</plugin>
+ </plugins>
+ </build>
+</project>
