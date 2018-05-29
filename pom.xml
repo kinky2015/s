@@ -31,7 +31,7 @@
 	<gradleVersion>2.14.1</gradleVersion>
 	<sourceCompatibility>1.8</sourceCompatibility>
 	<targetCompatibility>1.8</targetCompatibility>
-	<springfoxSwaggerVersion>2.5.0</springfoxSwaggerVersion>
+	<springfoxSwaggerVersion>2.7.0</springfoxSwaggerVersion>
 	<commonsLangVersion>2.6</commonsLangVersion>
 	<commonsBeanutilsVersion>1.9.2</commonsBeanutilsVersion>
 	<freemarkerVersion>2.3.25-incubating</freemarkerVersion>
