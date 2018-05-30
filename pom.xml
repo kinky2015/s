@@ -10,7 +10,6 @@
   <name>s</name>
   <url>http://maven.apache.org</url>
   <modules>
-  	<module>s-example-single</module>
   	<module>s-example-ms-db</module>
   	<module>s-example-ms-discovery</module>
   	<module>s-example-gateway</module>
@@ -20,6 +19,7 @@
   	<module>s-example-ms-start-w</module>
   	<module>s-example-ms-ui</module>
   	<module>s-example-ms-upm</module>
+  	<module>s-example-single</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,0 +1,552 @@
+[ INFO ] [2018-05-30 11:04:50] com.kinky.SingleApplicationMain [665] - The following profiles are active: prod
+[ WARN ] [2018-05-30 11:04:50] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [550] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.kinky.SingleApplicationMain]; nested exception is java.io.FileNotFoundException: class path resource [springfox/documentation/swagger/configuration/SwaggerCommonConfiguration.class] cannot be opened because it does not exist
+[ ERROR] [2018-05-30 11:04:50] org.springframework.beans.factory.support.DefaultListableBeanFactory [581] - Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@161aa04a: startup date [Wed May 30 11:04:50 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@293cde83
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ ERROR] [2018-05-30 11:04:50] org.springframework.boot.SpringApplication [839] - Application startup failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.kinky.SingleApplicationMain]; nested exception is java.io.FileNotFoundException: class path resource [springfox/documentation/swagger/configuration/SwaggerCommonConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:541)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:279)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:230)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:166)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:524)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+Caused by: java.io.FileNotFoundException: class path resource [springfox/documentation/swagger/configuration/SwaggerCommonConfiguration.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:50)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:98)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:89)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:76)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:93)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:633)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getRelated(ConfigurationClassParser.java:857)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getAnnotationAttributes(ConfigurationClassParser.java:838)
+	at org.springframework.context.annotation.ConfigurationClassParser.collectImports(ConfigurationClassParser.java:462)
+	at org.springframework.context.annotation.ConfigurationClassParser.getImports(ConfigurationClassParser.java:437)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:279)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:230)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:532)
+	... 17 common frames omitted
+[ ERROR] [2018-05-30 11:24:31] org.springframework.boot.SpringApplication [839] - Application startup failed
+java.lang.NoSuchMethodError: org.springframework.aop.scope.ScopedProxyUtils.isScopedTarget(Ljava/lang/String;)Z
+	at org.springframework.context.event.EventListenerMethodProcessor.afterSingletonsInstantiated(EventListenerMethodProcessor.java:79)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:779)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ WARN ] [2018-05-30 11:24:31] org.springframework.context.annotation.AnnotationConfigApplicationContext [1005] - Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@70abf9b0: startup date [Wed May 30 11:24:30 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:417)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1002)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:818)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ WARN ] [2018-05-30 11:24:31] org.springframework.boot.SpringApplication [91] - Error handling failed (no error message)
+[ ERROR] [2018-05-30 11:24:31] org.springframework.boot.SpringApplication [839] - Application startup failed
+java.lang.NoSuchMethodError: org.springframework.aop.scope.ScopedProxyUtils.isScopedTarget(Ljava/lang/String;)Z
+	at org.springframework.context.event.EventListenerMethodProcessor.afterSingletonsInstantiated(EventListenerMethodProcessor.java:79)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:779)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ ERROR] [2018-05-30 11:47:01] org.springframework.boot.SpringApplication [839] - Application startup failed
+java.lang.NoSuchMethodError: org.springframework.aop.scope.ScopedProxyUtils.isScopedTarget(Ljava/lang/String;)Z
+	at org.springframework.context.event.EventListenerMethodProcessor.afterSingletonsInstantiated(EventListenerMethodProcessor.java:79)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:779)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ WARN ] [2018-05-30 11:47:01] org.springframework.context.annotation.AnnotationConfigApplicationContext [1005] - Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.springframework.context.annotation.AnnotationConfigApplicationContext@325bb9a6: startup date [Wed May 30 11:47:00 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:417)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1002)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:961)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:818)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ WARN ] [2018-05-30 11:47:01] org.springframework.boot.SpringApplication [91] - Error handling failed (no error message)
+[ ERROR] [2018-05-30 11:47:01] org.springframework.boot.SpringApplication [839] - Application startup failed
+java.lang.NoSuchMethodError: org.springframework.aop.scope.ScopedProxyUtils.isScopedTarget(Ljava/lang/String;)Z
+	at org.springframework.context.event.EventListenerMethodProcessor.afterSingletonsInstantiated(EventListenerMethodProcessor.java:79)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:779)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:84)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:62)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+[ INFO ] [2018-05-30 11:49:04] com.kinky.SingleApplicationMain [665] - The following profiles are active: prod
+[ WARN ] [2018-05-30 11:49:08] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'ECacheConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ WARN ] [2018-05-30 11:49:08] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ INFO ] [2018-05-30 11:49:12] org.apache.catalina.core.StandardService [179] - Starting service Tomcat
+[ INFO ] [2018-05-30 11:49:12] org.apache.catalina.core.StandardEngine [179] - Starting Servlet Engine: Apache Tomcat/8.5.6
+[ INFO ] [2018-05-30 11:49:12] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring embedded WebApplicationContext
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.OauthClientDetailsEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.MenuI18nEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.ResourceEntity]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity.resources]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 11:49:17] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.users]; using defaults.
+[ INFO ] [2018-05-30 11:49:29] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[ INFO ] [2018-05-30 11:49:34] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [147] - Context refreshed
+[ INFO ] [2018-05-30 11:49:34] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [150] - Found 1 custom documentation plugin(s)
+[ INFO ] [2018-05-30 11:49:34] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [41] - Scanning for api listing references
+[ INFO ] [2018-05-30 11:49:34] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [40] - Generating unique operation named: allUsingGET_1
+[ INFO ] [2018-05-30 11:49:35] org.apache.coyote.http11.Http11NioProtocol [179] - Initializing ProtocolHandler ["http-nio-8080"]
+[ INFO ] [2018-05-30 11:49:35] org.apache.coyote.http11.Http11NioProtocol [179] - Starting ProtocolHandler [http-nio-8080]
+[ INFO ] [2018-05-30 11:49:35] org.apache.tomcat.util.net.NioSelectorPool [179] - Using a shared selector for servlet write/read
+[ INFO ] [2018-05-30 11:49:35] com.kinky.SingleApplicationMain [57] - Started SingleApplicationMain in 33.227 seconds (JVM running for 35.144)
+[ INFO ] [2018-05-30 11:50:01] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[ INFO ] [2018-05-30 11:50:01] com.loy.e.core.web.dispatch.DefaultDispatchServlet [489] - FrameworkServlet 'dispatcherServlet': initialization started
+[ INFO ] [2018-05-30 11:50:01] com.loy.e.core.web.dispatch.DefaultDispatchServlet [508] - FrameworkServlet 'dispatcherServlet': initialization completed in 57 ms
+[ ERROR] [2018-05-30 11:50:02] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [181] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.NoSuchMethodError: org.springframework.security.web.access.expression.WebSecurityExpressionRoot.setDefaultRolePrefix(Ljava/lang/String;)V
+	at org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler.createSecurityExpressionRoot(DefaultWebSecurityExpressionHandler.java:46)
+	at org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler.createSecurityExpressionRoot(DefaultWebSecurityExpressionHandler.java:32)
+	at org.springframework.security.access.expression.AbstractSecurityExpressionHandler.createEvaluationContext(AbstractSecurityExpressionHandler.java:47)
+	at org.springframework.security.web.access.expression.WebExpressionVoter.vote(WebExpressionVoter.java:48)
+	at org.springframework.security.web.access.expression.WebExpressionVoter.vote(WebExpressionVoter.java:33)
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:62)
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:206)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:124)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at com.loy.security.auth.filter.AbsTokenAuthenticationFilter.doFilterInternal(AbsTokenAuthenticationFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+[ INFO ] [2018-05-30 11:57:23] com.kinky.SingleApplicationMain [665] - The following profiles are active: prod
+[ WARN ] [2018-05-30 11:57:27] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'ECacheConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ WARN ] [2018-05-30 11:57:27] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ INFO ] [2018-05-30 11:57:32] org.apache.catalina.core.StandardService [179] - Starting service Tomcat
+[ INFO ] [2018-05-30 11:57:32] org.apache.catalina.core.StandardEngine [179] - Starting Servlet Engine: Apache Tomcat/8.5.6
+[ INFO ] [2018-05-30 11:57:32] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring embedded WebApplicationContext
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.OauthClientDetailsEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.MenuI18nEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.ResourceEntity]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity.resources]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 11:57:38] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.users]; using defaults.
+[ WARN ] [2018-05-30 11:57:50] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [550] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeMethodProcessor' defined in class path resource [com/loy/e/core/conf/WebConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver
+[ INFO ] [2018-05-30 11:57:50] org.apache.catalina.core.StandardService [179] - Stopping service Tomcat
+[ ERROR] [2018-05-30 11:57:50] org.springframework.boot.SpringApplication [839] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeMethodProcessor' defined in class path resource [com/loy/e/core/conf/WebConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.kinky.SingleApplicationMain.main(SingleApplicationMain.java:54)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1016)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:345)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:340)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1093)
+	at com.loy.e.core.web.arg.CompositeMethodProcessor.setApplicationContext(CompositeMethodProcessor.java:62)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:121)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:97)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:554)
+	... 15 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 33 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration.addArgumentResolvers(WebMvcSecurityConfiguration.java:44)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addArgumentResolvers(WebMvcConfigurerComposite.java:122)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addArgumentResolvers(DelegatingWebMvcConfiguration.java:107)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getArgumentResolvers(WebMvcConfigurationSupport.java:655)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:528)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:372)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$fe04ca70.CGLIB$requestMappingHandlerAdapter$6(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$fe04ca70$$FastClassBySpringCGLIB$$eabd1bcf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$fe04ca70.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 34 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 50 common frames omitted
+[ INFO ] [2018-05-30 12:03:51] com.kinky.SingleApplicationMain [665] - The following profiles are active: prod
+[ WARN ] [2018-05-30 12:03:55] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'ECacheConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ WARN ] [2018-05-30 12:03:55] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ INFO ] [2018-05-30 12:03:59] org.apache.catalina.core.StandardService [179] - Starting service Tomcat
+[ INFO ] [2018-05-30 12:03:59] org.apache.catalina.core.StandardEngine [179] - Starting Servlet Engine: Apache Tomcat/8.5.6
+[ INFO ] [2018-05-30 12:03:59] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring embedded WebApplicationContext
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.OauthClientDetailsEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.MenuI18nEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.ResourceEntity]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity.resources]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 12:04:05] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.users]; using defaults.
+[ INFO ] [2018-05-30 12:04:19] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[ INFO ] [2018-05-30 12:04:26] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [147] - Context refreshed
+[ INFO ] [2018-05-30 12:04:26] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [150] - Found 1 custom documentation plugin(s)
+[ INFO ] [2018-05-30 12:04:26] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [41] - Scanning for api listing references
+[ INFO ] [2018-05-30 12:04:26] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [40] - Generating unique operation named: allUsingGET_1
+[ INFO ] [2018-05-30 12:04:26] org.apache.coyote.http11.Http11NioProtocol [179] - Initializing ProtocolHandler ["http-nio-8080"]
+[ INFO ] [2018-05-30 12:04:26] org.apache.coyote.http11.Http11NioProtocol [179] - Starting ProtocolHandler [http-nio-8080]
+[ INFO ] [2018-05-30 12:04:26] org.apache.tomcat.util.net.NioSelectorPool [179] - Using a shared selector for servlet write/read
+[ INFO ] [2018-05-30 12:04:26] com.kinky.SingleApplicationMain [57] - Started SingleApplicationMain in 38.069 seconds (JVM running for 40.182)
+[ INFO ] [2018-05-30 12:33:03] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[ INFO ] [2018-05-30 12:33:03] com.loy.e.core.web.dispatch.DefaultDispatchServlet [489] - FrameworkServlet 'dispatcherServlet': initialization started
+[ INFO ] [2018-05-30 12:33:03] com.loy.e.core.web.dispatch.DefaultDispatchServlet [508] - FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
+[ ERROR] [2018-05-30 12:33:03] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [181] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.NoSuchMethodError: org.springframework.security.web.access.expression.WebSecurityExpressionRoot.setDefaultRolePrefix(Ljava/lang/String;)V
+	at org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler.createSecurityExpressionRoot(DefaultWebSecurityExpressionHandler.java:46)
+	at org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler.createSecurityExpressionRoot(DefaultWebSecurityExpressionHandler.java:32)
+	at org.springframework.security.access.expression.AbstractSecurityExpressionHandler.createEvaluationContext(AbstractSecurityExpressionHandler.java:47)
+	at org.springframework.security.web.access.expression.WebExpressionVoter.vote(WebExpressionVoter.java:48)
+	at org.springframework.security.web.access.expression.WebExpressionVoter.vote(WebExpressionVoter.java:33)
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:62)
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:206)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:124)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at com.loy.security.auth.filter.AbsTokenAuthenticationFilter.doFilterInternal(AbsTokenAuthenticationFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+[ INFO ] [2018-05-30 12:36:37] com.kinky.SingleApplicationMain [665] - The following profiles are active: prod
+[ WARN ] [2018-05-30 12:36:41] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'ECacheConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ WARN ] [2018-05-30 12:36:41] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[ INFO ] [2018-05-30 12:36:45] org.apache.catalina.core.StandardService [179] - Starting service Tomcat
+[ INFO ] [2018-05-30 12:36:45] org.apache.catalina.core.StandardEngine [179] - Starting Servlet Engine: Apache Tomcat/8.5.6
+[ INFO ] [2018-05-30 12:36:45] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring embedded WebApplicationContext
+[ WARN ] [2018-05-30 12:36:50] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[ WARN ] [2018-05-30 12:36:50] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.OauthClientDetailsEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.MenuI18nEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.ResourceEntity]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.RoleEntity.resources]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.upm.sys.domain.entity.UserEntity.roles]; using defaults.
+[ WARN ] [2018-05-30 12:36:51] org.hibernate.cache.ehcache.AbstractEhcacheRegionFactory [161] - HHH020003: Could not find a specific ehcache configuration for cache named [com.loy.e.data.permission.domain.entity.DataStrategyEntity.users]; using defaults.
+[ INFO ] [2018-05-30 12:37:05] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[ INFO ] [2018-05-30 12:37:10] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [147] - Context refreshed
+[ INFO ] [2018-05-30 12:37:10] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [150] - Found 1 custom documentation plugin(s)
+[ INFO ] [2018-05-30 12:37:10] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [41] - Scanning for api listing references
+[ INFO ] [2018-05-30 12:37:10] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [40] - Generating unique operation named: allUsingGET_1
+[ INFO ] [2018-05-30 12:37:10] org.apache.coyote.http11.Http11NioProtocol [179] - Initializing ProtocolHandler ["http-nio-8080"]
+[ INFO ] [2018-05-30 12:37:10] org.apache.coyote.http11.Http11NioProtocol [179] - Starting ProtocolHandler [http-nio-8080]
+[ INFO ] [2018-05-30 12:37:10] org.apache.tomcat.util.net.NioSelectorPool [179] - Using a shared selector for servlet write/read
+[ INFO ] [2018-05-30 12:37:10] com.kinky.SingleApplicationMain [57] - Started SingleApplicationMain in 35.568 seconds (JVM running for 37.586)
+[ INFO ] [2018-05-30 12:37:55] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[ INFO ] [2018-05-30 12:37:55] com.loy.e.core.web.dispatch.DefaultDispatchServlet [489] - FrameworkServlet 'dispatcherServlet': initialization started
+[ INFO ] [2018-05-30 12:37:55] com.loy.e.core.web.dispatch.DefaultDispatchServlet [508] - FrameworkServlet 'dispatcherServlet': initialization completed in 65 ms
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.TemplateEngine [825] - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.templateresolver.AbstractTemplateResolver [99] - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.templateresolver.AbstractTemplateResolver [110] - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.messageresolver.AbstractMessageResolver [72] - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.messageresolver.AbstractMessageResolver [78] - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.TemplateEngine.CONFIG [123] - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+[ INFO ] [2018-05-30 12:37:55] org.thymeleaf.TemplateEngine [838] - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
