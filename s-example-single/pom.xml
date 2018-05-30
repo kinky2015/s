@@ -75,6 +75,17 @@
 	    <artifactId>e-data-permission-ui</artifactId>
 	    <version>${eversion}</version>
     </dependency>
+    
+    <dependency>
+	    <groupId>com.kinky</groupId>
+	    <artifactId>s-demo-ui</artifactId>
+	    <version>0.0.1</version>
+    </dependency>
+     <dependency>
+	    <groupId>com.kinky</groupId>
+	    <artifactId>s-demo-service</artifactId>
+	    <version>0.0.1</version>
+    </dependency>
 	<dependency>
 	    <groupId>com.17jee</groupId>
 	    <artifactId>e-security-token</artifactId>
